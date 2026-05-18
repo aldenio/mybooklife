@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Book Life</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background: #fff;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .layout-stage {
+        position: relative;
+        width: min(100vw, 1672px);
+        aspect-ratio: 1672 / 941;
+        overflow: hidden;
+        background: url("Layout.png") center / 100% 100% no-repeat;
+      }
+
+      .slice,
+      .hotspot {
+        position: absolute;
+        display: block;
+      }
+
+      .slice {
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .hotspot {
+        z-index: 5;
+        border-radius: 10px;
+      }
+
+      .hotspot:focus-visible {
+        outline: 3px solid rgba(241, 44, 166, 0.75);
+        outline-offset: 3px;
+      }
+
+      .header {
+        left: 3.5885%;
+        top: 0%;
+        width: 94.0191%;
+        height: 10.627%;
+      }
+
+      .hero {
+        left: 5.0239%;
+        top: 15.4091%;
+        width: 29.9043%;
+        height: 38.8959%;
+      }
+
+      .club {
+        left: 40.9689%;
+        top: 12.1148%;
+        width: 50.8373%;
+        height: 42.0829%;
+      }
+
+      .authors {
+        left: 5.0239%;
+        top: 57.0669%;
+        width: 43.6603%;
+        height: 24.761%;
+      }
+
+      .calendar {
+        left: 50.8373%;
+        top: 57.0669%;
+        width: 40.8493%;
+        height: 27.0988%;
+      }
+
+      .features {
+        left: 4.7847%;
+        top: 83.1031%;
+        width: 41.866%;
+        height: 15.5154%;
+      }
+
+      .nook {
+        left: 48.8636%;
+        top: 85.6536%;
+        width: 44.1388%;
+        height: 12.9649%;
+      }
+
+      @media (max-width: 900px) {
+        body {
+          justify-content: flex-start;
+          overflow-x: auto;
+        }
+
+        .layout-stage {
+          width: 1672px;
+          max-width: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="layout-stage" aria-label="My Book Life homepage">
+      <img class="slice header" src="assets/slices/header.png" alt="" draggable="false" />
+      <img class="slice hero" src="assets/slices/hero.png" alt="" draggable="false" />
+      <img class="slice club" src="assets/slices/club.png" alt="" draggable="false" />
+      <img class="slice authors" src="assets/slices/authors.png" alt="" draggable="false" />
+      <img class="slice calendar" id="calendar-image" src="assets/calendars/may-18.png" alt="" draggable="false" />
+      <img class="slice features" src="assets/slices/features.png" alt="" draggable="false" />
+      <img class="slice nook" src="assets/slices/nook.png" alt="" draggable="false" />
+
+      <a class="hotspot" href="#" aria-label="Home" style="left: 30.98%; top: 4.36%; width: 4.25%; height: 3.95%"></a>
+      <a class="hotspot" href="#" aria-label="Book Clubs" style="left: 37.0%; top: 4.36%; width: 7.18%; height: 3.95%"></a>
+      <a class="hotspot" href="#" aria-label="Authors" style="left: 45.34%; top: 4.36%; width: 5.2%; height: 3.95%"></a>
+      <a class="hotspot" href="#" aria-label="Reading Calendar" style="left: 51.58%; top: 4.36%; width: 10.95%; height: 3.95%"></a>
+      <a class="hotspot" href="#" aria-label="Reading Nooks" style="left: 63.58%; top: 4.36%; width: 9.15%; height: 3.95%"></a>
+      <a class="hotspot" href="#" aria-label="Community" style="left: 74.06%; top: 4.36%; width: 7.72%; height: 3.95%"></a>
+      <a class="hotspot" href="#" aria-label="Sign In" style="left: 89.35%; top: 3.07%; width: 8.02%; height: 5.84%; border-radius: 999px"></a>
+
+      <a class="hotspot" href="#" aria-label="Join a Book Club" style="left: 6.7%; top: 48.95%; width: 11.9%; height: 4.82%"></a>
+      <a class="hotspot" href="#" aria-label="See My Reading Calendar" style="left: 20.52%; top: 48.95%; width: 13.68%; height: 4.82%"></a>
+      <a class="hotspot" href="#" aria-label="Join the Rebecca Yarros club" style="left: 42.7%; top: 44.1%; width: 9.1%; height: 4.75%"></a>
+
+      <a class="hotspot" href="#" aria-label="View all authors" style="left: 40.0%; top: 58.52%; width: 6.95%; height: 3.0%"></a>
+      <a class="hotspot" href="#" aria-label="Follow Rebecca Yarros" style="left: 11.95%; top: 75.3%; width: 6.2%; height: 3.0%"></a>
+      <a class="hotspot" href="#" aria-label="Follow Dan Brown" style="left: 25.85%; top: 75.3%; width: 6.2%; height: 3.0%"></a>
+      <a class="hotspot" href="#" aria-label="Follow Yuval Noah Harari" style="left: 39.62%; top: 75.3%; width: 6.2%; height: 3.0%"></a>
+
+      <a class="hotspot" href="#" aria-label="View full schedule" style="left: 66.25%; top: 79.8%; width: 9.16%; height: 3.0%"></a>
+      <a class="hotspot" href="#" aria-label="See all books" style="left: 80.98%; top: 79.8%; width: 9.1%; height: 3.0%"></a>
+
+      <a class="hotspot" href="#" aria-label="Join Communities" style="left: 5.9%; top: 86.05%; width: 8.44%; height: 10.6%"></a>
+      <a class="hotspot" href="#" aria-label="Track Your Reading" style="left: 16.15%; top: 86.05%; width: 8.44%; height: 10.6%"></a>
+      <a class="hotspot" href="#" aria-label="Live Discussions" style="left: 26.35%; top: 86.05%; width: 8.44%; height: 10.6%"></a>
+      <a class="hotspot" href="#" aria-label="Events and Readalongs" style="left: 36.58%; top: 86.05%; width: 8.44%; height: 10.6%"></a>
+      <a class="hotspot" href="#" aria-label="Explore Nooks" style="left: 74.2%; top: 94.95%; width: 7.4%; height: 3.05%"></a>
+
+    </main>
+
+    <script>
+      function loadCalendarImage() {
+        const calendarImage = document.querySelector("#calendar-image");
+        const today = new Date();
+        const month = today.getMonth();
+        const day = String(today.getDate()).padStart(2, "0");
+
+        if (month === 5) {
+          calendarImage.src = `assets/calendars/june-${day}.png`;
+          return;
+        }
+
+        const mayDay = String(Math.min(today.getDate(), 31)).padStart(2, "0");
+        calendarImage.src = `assets/calendars/may-${mayDay}.png`;
+      }
+
+      loadCalendarImage();
+    </script>
+  </body>
+</html>
