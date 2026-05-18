@@ -73,6 +73,60 @@
         height: 42.0829%;
       }
 
+      .carousel {
+        position: absolute;
+        display: block;
+        overflow: hidden;
+        z-index: 2;
+        border-radius: 22px;
+        box-shadow: 0 20px 45px rgba(36, 18, 58, 0.14);
+      }
+
+      .carousel-track {
+        display: flex;
+        width: 400%;
+        height: 100%;
+        animation: carousel-slide 18s infinite;
+      }
+
+      .carousel-track img {
+        width: 25%;
+        height: 100%;
+        flex: 0 0 25%;
+        object-fit: fill;
+        display: block;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      @keyframes carousel-slide {
+        0%,
+        20% {
+          transform: translateX(0);
+        }
+
+        30%,
+        50% {
+          transform: translateX(-25%);
+        }
+
+        60%,
+        80% {
+          transform: translateX(-50%);
+        }
+
+        90%,
+        100% {
+          transform: translateX(-75%);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .carousel-track {
+          animation: none;
+        }
+      }
+
       .authors {
         left: 5.0239%;
         top: 57.0669%;
@@ -118,7 +172,14 @@
     <main class="layout-stage" aria-label="My Book Life homepage">
       <img class="slice header" src="assets/slices/header.png" alt="" draggable="false" />
       <img class="slice hero" src="assets/slices/hero.png" alt="" draggable="false" />
-      <img class="slice club" src="assets/slices/club.png" alt="" draggable="false" />
+      <section class="carousel club" aria-label="Featured book club carousel">
+        <div class="carousel-track">
+          <img src="assets/carousel/card1.png" alt="" draggable="false" />
+          <img src="assets/carousel/card2.png" alt="" draggable="false" />
+          <img src="assets/carousel/card3.png" alt="" draggable="false" />
+          <img src="assets/carousel/card1.png" alt="" draggable="false" />
+        </div>
+      </section>
       <img class="slice authors" src="assets/slices/authors.png" alt="" draggable="false" />
       <img class="slice calendar" id="calendar-image" src="assets/calendars/may-18.png" alt="" draggable="false" />
       <img class="slice features" src="assets/slices/features.png" alt="" draggable="false" />
