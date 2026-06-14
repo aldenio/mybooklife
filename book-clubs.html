@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book Clubs · My Book Life</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background: #fff;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .layout-stage {
+        position: relative;
+        width: min(100vw, 1075px);
+        aspect-ratio: 1075 / 606;
+        overflow: hidden;
+        background: url("layout/book-clubs.jpeg") center / 100% 100% no-repeat;
+      }
+
+      .hotspot {
+        position: absolute;
+        display: block;
+        z-index: 5;
+        border-radius: 10px;
+      }
+
+      .hotspot:focus-visible {
+        outline: 3px solid rgba(241, 44, 166, 0.75);
+        outline-offset: 3px;
+      }
+
+      @media (max-width: 900px) {
+        body {
+          justify-content: flex-start;
+          overflow-x: auto;
+        }
+
+        .layout-stage {
+          width: 1075px;
+          max-width: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="layout-stage" aria-label="Book Clubs">
+      <a class="hotspot" href="index.html" aria-label="Home (logo)" style="left: 1.5%; top: 1%; width: 15%; height: 13%"></a>
+      <a class="hotspot" href="index.html" aria-label="Home" style="left: 37.5%; top: 3%; width: 5%; height: 7%"></a>
+      <a class="hotspot" href="book-clubs.html" aria-label="Book Clubs" style="left: 44.5%; top: 3%; width: 7%; height: 7%"></a>
+      <a class="hotspot" href="#" aria-label="Reading Nooks" style="left: 53%; top: 3%; width: 8.5%; height: 7%"></a>
+      <a class="hotspot" href="#" aria-label="Bookstore" style="left: 62%; top: 3%; width: 7%; height: 7%"></a>
+      <a class="hotspot" href="#" aria-label="Community" style="left: 70%; top: 3%; width: 8%; height: 7%"></a>
+      <a class="hotspot" href="#" aria-label="Sign In" style="left: 83%; top: 2%; width: 9%; height: 9%; border-radius: 999px"></a>
+
+      <!-- Row 1 — Yuval Noah Harari -->
+      <a class="hotspot" href="#" aria-label="Yuval Noah Harari profile" style="left: 5.5%; top: 15.5%; width: 27.5%; height: 13%"></a>
+      <a class="hotspot" href="#" aria-label="Follow Yuval Noah Harari" style="left: 15%; top: 24%; width: 9%; height: 4%"></a>
+      <a class="hotspot" href="#" aria-label="Nexus by Yuval Noah Harari" style="left: 33.5%; top: 15.5%; width: 13%; height: 13%"></a>
+      <a class="hotspot" href="#" aria-label="Beyond Information reading nook" style="left: 47%; top: 15.5%; width: 19%; height: 13%"></a>
+      <a class="hotspot" href="#" aria-label="Beyond Information Book Club" style="left: 67%; top: 15.5%; width: 26%; height: 13%"></a>
+
+      <!-- Row 2 — Dan Brown -->
+      <a class="hotspot" href="#" aria-label="Dan Brown profile" style="left: 5.5%; top: 30%; width: 27.5%; height: 13%"></a>
+      <a class="hotspot" href="#" aria-label="Follow Dan Brown" style="left: 15%; top: 38.5%; width: 9%; height: 4%"></a>
+      <a class="hotspot" href="#" aria-label="The Secret of Secrets by Dan Brown" style="left: 33.5%; top: 30%; width: 13%; height: 13%"></a>
+      <a class="hotspot" href="#" aria-label="Mystery Unlocked reading nook" style="left: 47%; top: 30%; width: 19%; height: 13%"></a>
+      <a class="hotspot" href="#" aria-label="Mystery Unlocked Book Club" style="left: 67%; top: 30%; width: 26%; height: 13%"></a>
+
+      <!-- Row 3 — Rebecca Yarros -->
+      <a class="hotspot" href="#" aria-label="Rebecca Yarros profile" style="left: 5.5%; top: 45%; width: 27.5%; height: 13%"></a>
+      <a class="hotspot" href="#" aria-label="Follow Rebecca Yarros" style="left: 15%; top: 53.5%; width: 9%; height: 4%"></a>
+      <a class="hotspot" href="#" aria-label="Fourth Wing by Rebecca Yarros" style="left: 33.5%; top: 45%; width: 13%; height: 13%"></a>
+      <a class="hotspot" href="#" aria-label="Dragon Rising reading nook" style="left: 47%; top: 45%; width: 19%; height: 13%"></a>
+      <a class="hotspot" href="#" aria-label="Dragon Rising Book Club" style="left: 67%; top: 45%; width: 26%; height: 13%"></a>
+    </main>
+  </body>
+</html>

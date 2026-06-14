@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us · My Book Life</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background: #fff;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .layout-stage {
+        position: relative;
+        width: min(100vw, 975px);
+        aspect-ratio: 975 / 545;
+        overflow: hidden;
+        background: url("layout/about-us.jpeg") center / 100% 100% no-repeat;
+      }
+
+      .hotspot {
+        position: absolute;
+        display: block;
+        z-index: 5;
+        border-radius: 10px;
+      }
+
+      .hotspot:focus-visible {
+        outline: 3px solid rgba(241, 44, 166, 0.75);
+        outline-offset: 3px;
+      }
+
+      @media (max-width: 900px) {
+        body {
+          justify-content: flex-start;
+          overflow-x: auto;
+        }
+
+        .layout-stage {
+          width: 975px;
+          max-width: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="layout-stage" aria-label="About Us">
+      <a class="hotspot" href="index.html" aria-label="Home" style="left: 1.5%; top: 1%; width: 15%; height: 14%"></a>
+      <a class="hotspot" href="index.html" aria-label="Home (nav)" style="left: 37%; top: 3.5%; width: 5%; height: 8%"></a>
+      <a class="hotspot" href="book-clubs.html" aria-label="Book Clubs" style="left: 44%; top: 3.5%; width: 7%; height: 8%"></a>
+      <a class="hotspot" href="#" aria-label="Reading Nooks" style="left: 52.5%; top: 3.5%; width: 9%; height: 8%"></a>
+      <a class="hotspot" href="#" aria-label="Bookstore" style="left: 62.5%; top: 3.5%; width: 7%; height: 8%"></a>
+      <a class="hotspot" href="#" aria-label="Community" style="left: 70.5%; top: 3.5%; width: 8%; height: 8%"></a>
+      <a class="hotspot" href="#" aria-label="Sign In" style="left: 84%; top: 2.5%; width: 9%; height: 10%; border-radius: 999px"></a>
+
+      <a class="hotspot" href="#" aria-label="Penguin Random House" style="left: 9%; top: 86.5%; width: 15%; height: 12%"></a>
+      <a class="hotspot" href="#" aria-label="HarperCollins" style="left: 25.5%; top: 86.5%; width: 15%; height: 12%"></a>
+      <a class="hotspot" href="#" aria-label="Hachette Livre" style="left: 42%; top: 86.5%; width: 15%; height: 12%"></a>
+      <a class="hotspot" href="#" aria-label="Macmillan Publishers" style="left: 58.5%; top: 86.5%; width: 15%; height: 12%"></a>
+      <a class="hotspot" href="#" aria-label="Simon &amp; Schuster" style="left: 75%; top: 86.5%; width: 15%; height: 12%"></a>
+    </main>
+  </body>
+</html>
