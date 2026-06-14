@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My Book Life</title>
+    <title>My Space · My Book Life</title>
     <style>
       * {
         box-sizing: border-box;
@@ -54,66 +54,6 @@
         outline-offset: 3px;
       }
 
-      .carousel {
-        position: absolute;
-        display: block;
-        overflow: hidden;
-        z-index: 2;
-        border-radius: 22px;
-      }
-
-      .club {
-        left: 38.78%;
-        top: 1.68%;
-        width: 53.56%;
-        height: 56.2%;
-      }
-
-      .carousel-track {
-        display: flex;
-        width: 400%;
-        height: 100%;
-        animation: carousel-slide 18s infinite;
-      }
-
-      .carousel-track img {
-        width: 25%;
-        height: 100%;
-        flex: 0 0 25%;
-        object-fit: fill;
-        display: block;
-        user-select: none;
-        pointer-events: none;
-      }
-
-      @keyframes carousel-slide {
-        0%,
-        20% {
-          transform: translateX(0);
-        }
-
-        30%,
-        50% {
-          transform: translateX(-25%);
-        }
-
-        60%,
-        80% {
-          transform: translateX(-50%);
-        }
-
-        90%,
-        100% {
-          transform: translateX(-75%);
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .carousel-track {
-          animation: none;
-        }
-      }
-
       @media (max-width: 900px) {
         body {
           justify-content: flex-start;
@@ -130,7 +70,7 @@
   <body>
     <div class="page">
       <header class="bar">
-        <img src="layout/MENU-PRINCIPAL-HOME.png" alt="" draggable="false" />
+        <img src="layout/MENU-PRINCIPAL-myspace.png" alt="" draggable="false" />
         <a class="hotspot" href="index.html" aria-label="Home (logo)" style="left: 2%; top: 15%; width: 16%; height: 70%"></a>
         <a class="hotspot" href="index.html" aria-label="Home" style="left: 31%; top: 25%; width: 6.5%; height: 55%"></a>
         <a class="hotspot" href="about-us.html" aria-label="About Us" style="left: 39%; top: 25%; width: 7.5%; height: 55%"></a>
@@ -142,27 +82,7 @@
       </header>
 
       <main class="bar">
-        <img src="layout/body-homepage.png" alt="" draggable="false" />
-
-        <!-- Featured book club carousel (overlays the static card in the body image) -->
-        <section class="carousel club" aria-label="Featured book club carousel">
-          <div class="carousel-track">
-            <img src="assets/carousel/card1.png" alt="" draggable="false" />
-            <img src="assets/carousel/card2.png" alt="" draggable="false" />
-            <img src="assets/carousel/card3.png" alt="" draggable="false" />
-            <img src="assets/carousel/card1.png" alt="" draggable="false" />
-          </div>
-        </section>
-
-        <a class="hotspot" href="book-clubs.html" aria-label="Join a Book Club" style="left: 5%; top: 49%; width: 18%; height: 7%"></a>
-        <a class="hotspot" href="#" aria-label="See My Reading Calendar" style="left: 24%; top: 49%; width: 17%; height: 7%"></a>
-        <a class="hotspot" href="book-clubs.html" aria-label="Join the Club" style="left: 40.5%; top: 48%; width: 9%; height: 6%"></a>
-        <a class="hotspot" href="book-clubs.html" aria-label="View all authors" style="left: 28%; top: 60%; width: 9%; height: 4%"></a>
-        <a class="hotspot" href="#" aria-label="Follow Rebecca Yarros" style="left: 7%; top: 84%; width: 7%; height: 5%"></a>
-        <a class="hotspot" href="#" aria-label="Follow Dan Brown" style="left: 19%; top: 84%; width: 7%; height: 5%"></a>
-        <a class="hotspot" href="#" aria-label="Follow Yuval Noah Harari" style="left: 31%; top: 84%; width: 7%; height: 5%"></a>
-        <a class="hotspot" href="#" aria-label="View full schedule" style="left: 50%; top: 90%; width: 9%; height: 4%"></a>
-        <a class="hotspot" href="#" aria-label="See all books" style="left: 87%; top: 90%; width: 9%; height: 4%"></a>
+        <img src="layout/body-MySpace.png" alt="" draggable="false" />
       </main>
 
       <footer class="bar">
