@@ -31,6 +31,67 @@
         background: url("layout/homepage.png") center / 100% 100% no-repeat;
       }
 
+      .carousel {
+        position: absolute;
+        display: block;
+        overflow: hidden;
+        z-index: 2;
+        border-radius: 22px;
+        box-shadow: 0 20px 45px rgba(36, 18, 58, 0.14);
+      }
+
+      .club {
+        left: 38.82%;
+        top: 10.41%;
+        width: 53.53%;
+        height: 46.23%;
+      }
+
+      .carousel-track {
+        display: flex;
+        width: 400%;
+        height: 100%;
+        animation: carousel-slide 18s infinite;
+      }
+
+      .carousel-track img {
+        width: 25%;
+        height: 100%;
+        flex: 0 0 25%;
+        object-fit: fill;
+        display: block;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      @keyframes carousel-slide {
+        0%,
+        20% {
+          transform: translateX(0);
+        }
+
+        30%,
+        50% {
+          transform: translateX(-25%);
+        }
+
+        60%,
+        80% {
+          transform: translateX(-50%);
+        }
+
+        90%,
+        100% {
+          transform: translateX(-75%);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .carousel-track {
+          animation: none;
+        }
+      }
+
       .hotspot {
         position: absolute;
         display: block;
@@ -58,6 +119,16 @@
   </head>
   <body>
     <main class="layout-stage" aria-label="BookMyLife homepage">
+      <!-- Featured book club carousel (overlays the static card in the background) -->
+      <section class="carousel club" aria-label="Featured book club carousel">
+        <div class="carousel-track">
+          <img src="assets/carousel/card1.png" alt="" draggable="false" />
+          <img src="assets/carousel/card2.png" alt="" draggable="false" />
+          <img src="assets/carousel/card3.png" alt="" draggable="false" />
+          <img src="assets/carousel/card1.png" alt="" draggable="false" />
+        </div>
+      </section>
+
       <!-- Top menu -->
       <a class="hotspot" href="index.html" aria-label="Home (logo)" style="left: 3%; top: 1%; width: 15%; height: 7.5%"></a>
       <a class="hotspot" href="index.html" aria-label="Home" style="left: 31%; top: 2%; width: 6.5%; height: 6%"></a>
