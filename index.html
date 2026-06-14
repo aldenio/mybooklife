@@ -23,46 +23,17 @@
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
 
-      .page {
-        position: relative;
-        width: min(100vw, 1672px);
-        display: flex;
-        flex-direction: column;
-      }
-
       .layout-stage {
         position: relative;
-        width: 100%;
+        width: min(100vw, 1672px);
         aspect-ratio: 1672 / 941;
         overflow: hidden;
-        background: url("Layout.png") center / 100% 100% no-repeat;
+        background: url("layout/homepage.png") center / 100% 100% no-repeat;
       }
 
-      .site-footer {
-        position: relative;
-        width: 100%;
-      }
-
-      .footer-img {
-        display: block;
-        width: 100%;
-        height: auto;
-        user-select: none;
-        pointer-events: none;
-      }
-
-      .slice,
       .hotspot {
         position: absolute;
         display: block;
-      }
-
-      .slice {
-        pointer-events: none;
-        user-select: none;
-      }
-
-      .hotspot {
         z-index: 5;
         border-radius: 10px;
       }
@@ -72,117 +43,13 @@
         outline-offset: 3px;
       }
 
-      .header {
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: auto;
-        z-index: 3;
-      }
-
-      .hero {
-        left: 5.0239%;
-        top: 15.4091%;
-        width: 29.9043%;
-        height: 38.8959%;
-      }
-
-      .club {
-        left: 40.9689%;
-        top: 12.1148%;
-        width: 50.8373%;
-        height: 42.0829%;
-      }
-
-      .carousel {
-        position: absolute;
-        display: block;
-        overflow: hidden;
-        z-index: 2;
-        border-radius: 22px;
-        box-shadow: 0 20px 45px rgba(36, 18, 58, 0.14);
-      }
-
-      .carousel-track {
-        display: flex;
-        width: 400%;
-        height: 100%;
-        animation: carousel-slide 18s infinite;
-      }
-
-      .carousel-track img {
-        width: 25%;
-        height: 100%;
-        flex: 0 0 25%;
-        object-fit: fill;
-        display: block;
-        user-select: none;
-        pointer-events: none;
-      }
-
-      @keyframes carousel-slide {
-        0%,
-        20% {
-          transform: translateX(0);
-        }
-
-        30%,
-        50% {
-          transform: translateX(-25%);
-        }
-
-        60%,
-        80% {
-          transform: translateX(-50%);
-        }
-
-        90%,
-        100% {
-          transform: translateX(-75%);
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .carousel-track {
-          animation: none;
-        }
-      }
-
-      .authors {
-        left: 5.0239%;
-        top: 57.0669%;
-        width: 43.6603%;
-        height: 24.761%;
-      }
-
-      .calendar {
-        left: 50.8373%;
-        top: 57.0669%;
-        width: 40.8493%;
-        height: 27.0988%;
-      }
-
-      .features {
-        left: 4.7847%;
-        top: 83.1031%;
-        width: 41.866%;
-        height: 15.5154%;
-      }
-
-      .nook {
-        left: 48.8636%;
-        top: 85.6536%;
-        width: 44.1388%;
-        height: 12.9649%;
-      }
-
       @media (max-width: 900px) {
         body {
           justify-content: flex-start;
           overflow-x: auto;
         }
 
-        .page {
+        .layout-stage {
           width: 1672px;
           max-width: none;
         }
@@ -190,77 +57,38 @@
     </style>
   </head>
   <body>
-    <div class="page">
-    <main class="layout-stage" aria-label="My Book Life homepage">
-      <img class="slice header" src="assets/slices/main-header.png" alt="" draggable="false" />
-      <img class="slice hero" src="assets/slices/hero.png" alt="" draggable="false" />
-      <section class="carousel club" aria-label="Featured book club carousel">
-        <div class="carousel-track">
-          <img src="assets/carousel/card1.png" alt="" draggable="false" />
-          <img src="assets/carousel/card2.png" alt="" draggable="false" />
-          <img src="assets/carousel/card3.png" alt="" draggable="false" />
-          <img src="assets/carousel/card1.png" alt="" draggable="false" />
-        </div>
-      </section>
-      <img class="slice authors" src="assets/slices/authors.png" alt="" draggable="false" />
-      <img class="slice calendar" id="calendar-image" src="assets/calendars/may-18.png" alt="" draggable="false" />
-      <img class="slice features" src="assets/slices/features.png" alt="" draggable="false" />
-      <img class="slice nook" src="assets/slices/nook.png" alt="" draggable="false" />
+    <main class="layout-stage" aria-label="BookMyLife homepage">
+      <!-- Top menu -->
+      <a class="hotspot" href="index.html" aria-label="Home (logo)" style="left: 3%; top: 1%; width: 15%; height: 7.5%"></a>
+      <a class="hotspot" href="index.html" aria-label="Home" style="left: 31%; top: 2%; width: 6.5%; height: 6%"></a>
+      <a class="hotspot" href="about-us.html" aria-label="About Us" style="left: 39%; top: 2%; width: 7.5%; height: 6%"></a>
+      <a class="hotspot" href="book-clubs.html" aria-label="Book Clubs" style="left: 48%; top: 2%; width: 8.5%; height: 6%"></a>
+      <a class="hotspot" href="#" aria-label="My Space" style="left: 58%; top: 2%; width: 7.5%; height: 6%"></a>
+      <a class="hotspot" href="#" aria-label="Reading Nooks" style="left: 66%; top: 2%; width: 10.5%; height: 6%"></a>
+      <a class="hotspot" href="contact-us.html" aria-label="Contact Us" style="left: 78%; top: 2%; width: 8.5%; height: 6%"></a>
+      <a class="hotspot" href="#" aria-label="Sign In" style="left: 89%; top: 1.5%; width: 8.5%; height: 6.5%; border-radius: 999px"></a>
 
-      <a class="hotspot" href="index.html" aria-label="Home (logo)" style="left: 2%; top: 1.5%; width: 16%; height: 7%"></a>
-      <a class="hotspot" href="index.html" aria-label="Home" style="left: 30.5%; top: 3%; width: 7%; height: 4.5%"></a>
-      <a class="hotspot" href="about-us.html" aria-label="About Us" style="left: 38.5%; top: 3%; width: 8%; height: 4.5%"></a>
-      <a class="hotspot" href="book-clubs.html" aria-label="Book Clubs" style="left: 47.5%; top: 3%; width: 9%; height: 4.5%"></a>
-      <a class="hotspot" href="#" aria-label="My Space" style="left: 57.5%; top: 3%; width: 8%; height: 4.5%"></a>
-      <a class="hotspot" href="#" aria-label="Reading Nooks" style="left: 66%; top: 3%; width: 10.5%; height: 4.5%"></a>
-      <a class="hotspot" href="contact-us.html" aria-label="Contact Us" style="left: 77.5%; top: 3%; width: 9%; height: 4.5%"></a>
-      <a class="hotspot" href="#" aria-label="Sign In" style="left: 90.5%; top: 2%; width: 8%; height: 6%; border-radius: 999px"></a>
+      <!-- Hero call-to-actions -->
+      <a class="hotspot" href="book-clubs.html" aria-label="Join a Book Club" style="left: 4%; top: 50%; width: 18%; height: 6.5%"></a>
+      <a class="hotspot" href="#" aria-label="See My Reading Calendar" style="left: 24%; top: 50%; width: 16.5%; height: 6.5%"></a>
 
-      <a class="hotspot" href="#" aria-label="Join a Book Club" style="left: 6.7%; top: 48.95%; width: 11.9%; height: 4.82%"></a>
-      <a class="hotspot" href="#" aria-label="See My Reading Calendar" style="left: 20.52%; top: 48.95%; width: 13.68%; height: 4.82%"></a>
-      <a class="hotspot" href="#" aria-label="Join the Rebecca Yarros club" style="left: 42.7%; top: 44.1%; width: 9.1%; height: 4.75%"></a>
+      <!-- Featured club -->
+      <a class="hotspot" href="book-clubs.html" aria-label="Join the Club" style="left: 40.5%; top: 49%; width: 9%; height: 5%"></a>
 
-      <a class="hotspot" href="#" aria-label="View all authors" style="left: 40.0%; top: 58.52%; width: 6.95%; height: 3.0%"></a>
-      <a class="hotspot" href="#" aria-label="Follow Rebecca Yarros" style="left: 11.95%; top: 75.3%; width: 6.2%; height: 3.0%"></a>
-      <a class="hotspot" href="#" aria-label="Follow Dan Brown" style="left: 25.85%; top: 75.3%; width: 6.2%; height: 3.0%"></a>
-      <a class="hotspot" href="#" aria-label="Follow Yuval Noah Harari" style="left: 39.62%; top: 75.3%; width: 6.2%; height: 3.0%"></a>
+      <!-- Author spotlights -->
+      <a class="hotspot" href="book-clubs.html" aria-label="View all authors" style="left: 28%; top: 59%; width: 9%; height: 3%"></a>
+      <a class="hotspot" href="#" aria-label="Follow Rebecca Yarros" style="left: 7%; top: 79%; width: 7%; height: 4%"></a>
+      <a class="hotspot" href="#" aria-label="Follow Dan Brown" style="left: 19%; top: 79%; width: 7%; height: 4%"></a>
+      <a class="hotspot" href="#" aria-label="Follow Yuval Noah Harari" style="left: 31%; top: 79%; width: 7%; height: 4%"></a>
 
-      <a class="hotspot" href="#" aria-label="View full schedule" style="left: 66.25%; top: 79.8%; width: 9.16%; height: 3.0%"></a>
-      <a class="hotspot" href="#" aria-label="See all books" style="left: 80.98%; top: 79.8%; width: 9.1%; height: 3.0%"></a>
+      <!-- Reading calendar -->
+      <a class="hotspot" href="#" aria-label="View full schedule" style="left: 50%; top: 84%; width: 9%; height: 3.5%"></a>
+      <a class="hotspot" href="#" aria-label="See all books" style="left: 87%; top: 84%; width: 9%; height: 3.5%"></a>
 
-      <a class="hotspot" href="#" aria-label="Join Communities" style="left: 5.9%; top: 86.05%; width: 8.44%; height: 10.6%"></a>
-      <a class="hotspot" href="#" aria-label="Track Your Reading" style="left: 16.15%; top: 86.05%; width: 8.44%; height: 10.6%"></a>
-      <a class="hotspot" href="#" aria-label="Live Discussions" style="left: 26.35%; top: 86.05%; width: 8.44%; height: 10.6%"></a>
-      <a class="hotspot" href="#" aria-label="Events and Readalongs" style="left: 36.58%; top: 86.05%; width: 8.44%; height: 10.6%"></a>
-      <a class="hotspot" href="#" aria-label="Explore Nooks" style="left: 74.2%; top: 94.95%; width: 7.4%; height: 3.05%"></a>
-
+      <!-- Footer -->
+      <a class="hotspot" href="index.html" aria-label="BookMyLife home" style="left: 5%; top: 92.8%; width: 13%; height: 4.5%"></a>
+      <a class="hotspot" href="mailto:hello@bookmylife.com" aria-label="Email hello@bookmylife.com" style="left: 41%; top: 91.5%; width: 15%; height: 4.5%"></a>
+      <a class="hotspot" href="tel:+15551234567" aria-label="Call +1 (555) 123-4567" style="left: 58%; top: 91.5%; width: 13%; height: 4.5%"></a>
     </main>
-
-    <footer class="site-footer" aria-label="Site footer">
-      <img class="footer-img" src="assets/footer.png" alt="" draggable="false" />
-      <a class="hotspot" href="index.html" aria-label="BookMyLife home" style="left: 3%; top: 18%; width: 15%; height: 36%"></a>
-      <a class="hotspot" href="mailto:hello@bookmylife.com" aria-label="Email hello@bookmylife.com" style="left: 42%; top: 18%; width: 17%; height: 34%"></a>
-      <a class="hotspot" href="tel:+15551234567" aria-label="Call +1 (555) 123-4567" style="left: 59%; top: 18%; width: 12%; height: 34%"></a>
-    </footer>
-    </div>
-
-    <script>
-      function loadCalendarImage() {
-        const calendarImage = document.querySelector("#calendar-image");
-        const today = new Date();
-        const month = today.getMonth();
-        const day = String(today.getDate()).padStart(2, "0");
-
-        if (month === 5) {
-          calendarImage.src = `assets/calendars/june-${day}.png`;
-          return;
-        }
-
-        const mayDay = String(Math.min(today.getDate(), 31)).padStart(2, "0");
-        calendarImage.src = `assets/calendars/may-${mayDay}.png`;
-      }
-
-      loadCalendarImage();
-    </script>
   </body>
 </html>

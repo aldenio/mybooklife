@@ -23,12 +23,43 @@
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
 
-      .layout-stage {
+      .page {
         position: relative;
         width: min(100vw, 1075px);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .layout-stage {
+        position: relative;
+        width: 100%;
         aspect-ratio: 1075 / 606;
         overflow: hidden;
         background: url("layout/book-clubs.jpeg") center / 100% 100% no-repeat;
+      }
+
+      .header-overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        z-index: 3;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .site-footer {
+        position: relative;
+        width: 100%;
+      }
+
+      .footer-img {
+        display: block;
+        width: 100%;
+        height: auto;
+        user-select: none;
+        pointer-events: none;
       }
 
       .hotspot {
@@ -49,7 +80,7 @@
           overflow-x: auto;
         }
 
-        .layout-stage {
+        .page {
           width: 1075px;
           max-width: none;
         }
@@ -57,35 +88,47 @@
     </style>
   </head>
   <body>
-    <main class="layout-stage" aria-label="Book Clubs">
-      <a class="hotspot" href="index.html" aria-label="Home (logo)" style="left: 1.5%; top: 1%; width: 15%; height: 13%"></a>
-      <a class="hotspot" href="index.html" aria-label="Home" style="left: 37.5%; top: 3%; width: 5%; height: 7%"></a>
-      <a class="hotspot" href="book-clubs.html" aria-label="Book Clubs" style="left: 44.5%; top: 3%; width: 7%; height: 7%"></a>
-      <a class="hotspot" href="#" aria-label="Reading Nooks" style="left: 53%; top: 3%; width: 8.5%; height: 7%"></a>
-      <a class="hotspot" href="#" aria-label="Bookstore" style="left: 62%; top: 3%; width: 7%; height: 7%"></a>
-      <a class="hotspot" href="#" aria-label="Community" style="left: 70%; top: 3%; width: 8%; height: 7%"></a>
-      <a class="hotspot" href="#" aria-label="Sign In" style="left: 83%; top: 2%; width: 9%; height: 9%; border-radius: 999px"></a>
+    <div class="page">
+      <main class="layout-stage" aria-label="Book Clubs">
+        <img class="header-overlay" src="assets/slices/site-header.png" alt="" draggable="false" />
 
-      <!-- Row 1 — Yuval Noah Harari -->
-      <a class="hotspot" href="#" aria-label="Yuval Noah Harari profile" style="left: 5.5%; top: 15.5%; width: 27.5%; height: 13%"></a>
-      <a class="hotspot" href="#" aria-label="Follow Yuval Noah Harari" style="left: 15%; top: 24%; width: 9%; height: 4%"></a>
-      <a class="hotspot" href="#" aria-label="Nexus by Yuval Noah Harari" style="left: 33.5%; top: 15.5%; width: 13%; height: 13%"></a>
-      <a class="hotspot" href="#" aria-label="Beyond Information reading nook" style="left: 47%; top: 15.5%; width: 19%; height: 13%"></a>
-      <a class="hotspot" href="#" aria-label="Beyond Information Book Club" style="left: 67%; top: 15.5%; width: 26%; height: 13%"></a>
+        <a class="hotspot" href="index.html" aria-label="Home (logo)" style="left: 3%; top: 1%; width: 15%; height: 7.5%"></a>
+        <a class="hotspot" href="index.html" aria-label="Home" style="left: 31%; top: 2%; width: 6.5%; height: 6%"></a>
+        <a class="hotspot" href="about-us.html" aria-label="About Us" style="left: 39%; top: 2%; width: 7.5%; height: 6%"></a>
+        <a class="hotspot" href="book-clubs.html" aria-label="Book Clubs" style="left: 48%; top: 2%; width: 8.5%; height: 6%"></a>
+        <a class="hotspot" href="#" aria-label="My Space" style="left: 58%; top: 2%; width: 7.5%; height: 6%"></a>
+        <a class="hotspot" href="#" aria-label="Reading Nooks" style="left: 66%; top: 2%; width: 10.5%; height: 6%"></a>
+        <a class="hotspot" href="contact-us.html" aria-label="Contact Us" style="left: 78%; top: 2%; width: 8.5%; height: 6%"></a>
+        <a class="hotspot" href="#" aria-label="Sign In" style="left: 89%; top: 1.5%; width: 8.5%; height: 6.5%; border-radius: 999px"></a>
 
-      <!-- Row 2 — Dan Brown -->
-      <a class="hotspot" href="#" aria-label="Dan Brown profile" style="left: 5.5%; top: 30%; width: 27.5%; height: 13%"></a>
-      <a class="hotspot" href="#" aria-label="Follow Dan Brown" style="left: 15%; top: 38.5%; width: 9%; height: 4%"></a>
-      <a class="hotspot" href="#" aria-label="The Secret of Secrets by Dan Brown" style="left: 33.5%; top: 30%; width: 13%; height: 13%"></a>
-      <a class="hotspot" href="#" aria-label="Mystery Unlocked reading nook" style="left: 47%; top: 30%; width: 19%; height: 13%"></a>
-      <a class="hotspot" href="#" aria-label="Mystery Unlocked Book Club" style="left: 67%; top: 30%; width: 26%; height: 13%"></a>
+        <!-- Row 1 — Yuval Noah Harari -->
+        <a class="hotspot" href="#" aria-label="Yuval Noah Harari profile" style="left: 5.5%; top: 15.5%; width: 27.5%; height: 13%"></a>
+        <a class="hotspot" href="#" aria-label="Follow Yuval Noah Harari" style="left: 15%; top: 24%; width: 9%; height: 4%"></a>
+        <a class="hotspot" href="#" aria-label="Nexus by Yuval Noah Harari" style="left: 33.5%; top: 15.5%; width: 13%; height: 13%"></a>
+        <a class="hotspot" href="#" aria-label="Beyond Information reading nook" style="left: 47%; top: 15.5%; width: 19%; height: 13%"></a>
+        <a class="hotspot" href="#" aria-label="Beyond Information Book Club" style="left: 67%; top: 15.5%; width: 26%; height: 13%"></a>
 
-      <!-- Row 3 — Rebecca Yarros -->
-      <a class="hotspot" href="#" aria-label="Rebecca Yarros profile" style="left: 5.5%; top: 45%; width: 27.5%; height: 13%"></a>
-      <a class="hotspot" href="#" aria-label="Follow Rebecca Yarros" style="left: 15%; top: 53.5%; width: 9%; height: 4%"></a>
-      <a class="hotspot" href="#" aria-label="Fourth Wing by Rebecca Yarros" style="left: 33.5%; top: 45%; width: 13%; height: 13%"></a>
-      <a class="hotspot" href="#" aria-label="Dragon Rising reading nook" style="left: 47%; top: 45%; width: 19%; height: 13%"></a>
-      <a class="hotspot" href="#" aria-label="Dragon Rising Book Club" style="left: 67%; top: 45%; width: 26%; height: 13%"></a>
-    </main>
+        <!-- Row 2 — Dan Brown -->
+        <a class="hotspot" href="#" aria-label="Dan Brown profile" style="left: 5.5%; top: 30%; width: 27.5%; height: 13%"></a>
+        <a class="hotspot" href="#" aria-label="Follow Dan Brown" style="left: 15%; top: 38.5%; width: 9%; height: 4%"></a>
+        <a class="hotspot" href="#" aria-label="The Secret of Secrets by Dan Brown" style="left: 33.5%; top: 30%; width: 13%; height: 13%"></a>
+        <a class="hotspot" href="#" aria-label="Mystery Unlocked reading nook" style="left: 47%; top: 30%; width: 19%; height: 13%"></a>
+        <a class="hotspot" href="#" aria-label="Mystery Unlocked Book Club" style="left: 67%; top: 30%; width: 26%; height: 13%"></a>
+
+        <!-- Row 3 — Rebecca Yarros -->
+        <a class="hotspot" href="#" aria-label="Rebecca Yarros profile" style="left: 5.5%; top: 45%; width: 27.5%; height: 13%"></a>
+        <a class="hotspot" href="#" aria-label="Follow Rebecca Yarros" style="left: 15%; top: 53.5%; width: 9%; height: 4%"></a>
+        <a class="hotspot" href="#" aria-label="Fourth Wing by Rebecca Yarros" style="left: 33.5%; top: 45%; width: 13%; height: 13%"></a>
+        <a class="hotspot" href="#" aria-label="Dragon Rising reading nook" style="left: 47%; top: 45%; width: 19%; height: 13%"></a>
+        <a class="hotspot" href="#" aria-label="Dragon Rising Book Club" style="left: 67%; top: 45%; width: 26%; height: 13%"></a>
+      </main>
+
+      <footer class="site-footer" aria-label="Site footer">
+        <img class="footer-img" src="assets/site-footer.png" alt="" draggable="false" />
+        <a class="hotspot" href="index.html" aria-label="BookMyLife home" style="left: 5%; top: 30%; width: 13%; height: 45%"></a>
+        <a class="hotspot" href="mailto:hello@bookmylife.com" aria-label="Email hello@bookmylife.com" style="left: 41%; top: 35%; width: 15%; height: 35%"></a>
+        <a class="hotspot" href="tel:+15551234567" aria-label="Call +1 (555) 123-4567" style="left: 58%; top: 35%; width: 13%; height: 35%"></a>
+      </footer>
+    </div>
   </body>
 </html>

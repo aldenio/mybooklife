@@ -23,12 +23,43 @@
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
 
-      .layout-stage {
+      .page {
         position: relative;
         width: min(100vw, 975px);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .layout-stage {
+        position: relative;
+        width: 100%;
         aspect-ratio: 975 / 545;
         overflow: hidden;
         background: url("layout/about-us.jpeg") center / 100% 100% no-repeat;
+      }
+
+      .header-overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        z-index: 3;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .site-footer {
+        position: relative;
+        width: 100%;
+      }
+
+      .footer-img {
+        display: block;
+        width: 100%;
+        height: auto;
+        user-select: none;
+        pointer-events: none;
       }
 
       .hotspot {
@@ -49,7 +80,7 @@
           overflow-x: auto;
         }
 
-        .layout-stage {
+        .page {
           width: 975px;
           max-width: none;
         }
@@ -57,20 +88,32 @@
     </style>
   </head>
   <body>
-    <main class="layout-stage" aria-label="About Us">
-      <a class="hotspot" href="index.html" aria-label="Home" style="left: 1.5%; top: 1%; width: 15%; height: 14%"></a>
-      <a class="hotspot" href="index.html" aria-label="Home (nav)" style="left: 37%; top: 3.5%; width: 5%; height: 8%"></a>
-      <a class="hotspot" href="book-clubs.html" aria-label="Book Clubs" style="left: 44%; top: 3.5%; width: 7%; height: 8%"></a>
-      <a class="hotspot" href="#" aria-label="Reading Nooks" style="left: 52.5%; top: 3.5%; width: 9%; height: 8%"></a>
-      <a class="hotspot" href="#" aria-label="Bookstore" style="left: 62.5%; top: 3.5%; width: 7%; height: 8%"></a>
-      <a class="hotspot" href="#" aria-label="Community" style="left: 70.5%; top: 3.5%; width: 8%; height: 8%"></a>
-      <a class="hotspot" href="#" aria-label="Sign In" style="left: 84%; top: 2.5%; width: 9%; height: 10%; border-radius: 999px"></a>
+    <div class="page">
+      <main class="layout-stage" aria-label="About Us">
+        <img class="header-overlay" src="assets/slices/site-header.png" alt="" draggable="false" />
 
-      <a class="hotspot" href="https://www.penguinrandomhouse.com" target="_blank" rel="noopener noreferrer" aria-label="Penguin Random House" style="left: 9%; top: 86.5%; width: 15%; height: 12%"></a>
-      <a class="hotspot" href="https://www.harpercollins.com" target="_blank" rel="noopener noreferrer" aria-label="HarperCollins" style="left: 25.5%; top: 86.5%; width: 15%; height: 12%"></a>
-      <a class="hotspot" href="https://www.hachette.com" target="_blank" rel="noopener noreferrer" aria-label="Hachette Livre" style="left: 42%; top: 86.5%; width: 15%; height: 12%"></a>
-      <a class="hotspot" href="https://www.macmillan.com" target="_blank" rel="noopener noreferrer" aria-label="Macmillan Publishers" style="left: 58.5%; top: 86.5%; width: 15%; height: 12%"></a>
-      <a class="hotspot" href="https://www.simonandschuster.com" target="_blank" rel="noopener noreferrer" aria-label="Simon &amp; Schuster" style="left: 75%; top: 86.5%; width: 15%; height: 12%"></a>
-    </main>
+        <a class="hotspot" href="index.html" aria-label="Home (logo)" style="left: 3%; top: 1%; width: 15%; height: 7.5%"></a>
+        <a class="hotspot" href="index.html" aria-label="Home" style="left: 31%; top: 2%; width: 6.5%; height: 6%"></a>
+        <a class="hotspot" href="about-us.html" aria-label="About Us" style="left: 39%; top: 2%; width: 7.5%; height: 6%"></a>
+        <a class="hotspot" href="book-clubs.html" aria-label="Book Clubs" style="left: 48%; top: 2%; width: 8.5%; height: 6%"></a>
+        <a class="hotspot" href="#" aria-label="My Space" style="left: 58%; top: 2%; width: 7.5%; height: 6%"></a>
+        <a class="hotspot" href="#" aria-label="Reading Nooks" style="left: 66%; top: 2%; width: 10.5%; height: 6%"></a>
+        <a class="hotspot" href="contact-us.html" aria-label="Contact Us" style="left: 78%; top: 2%; width: 8.5%; height: 6%"></a>
+        <a class="hotspot" href="#" aria-label="Sign In" style="left: 89%; top: 1.5%; width: 8.5%; height: 6.5%; border-radius: 999px"></a>
+
+        <a class="hotspot" href="https://www.penguinrandomhouse.com" target="_blank" rel="noopener noreferrer" aria-label="Penguin Random House" style="left: 9%; top: 86.5%; width: 15%; height: 12%"></a>
+        <a class="hotspot" href="https://www.harpercollins.com" target="_blank" rel="noopener noreferrer" aria-label="HarperCollins" style="left: 25.5%; top: 86.5%; width: 15%; height: 12%"></a>
+        <a class="hotspot" href="https://www.hachette.com" target="_blank" rel="noopener noreferrer" aria-label="Hachette Livre" style="left: 42%; top: 86.5%; width: 15%; height: 12%"></a>
+        <a class="hotspot" href="https://www.macmillan.com" target="_blank" rel="noopener noreferrer" aria-label="Macmillan Publishers" style="left: 58.5%; top: 86.5%; width: 15%; height: 12%"></a>
+        <a class="hotspot" href="https://www.simonandschuster.com" target="_blank" rel="noopener noreferrer" aria-label="Simon &amp; Schuster" style="left: 75%; top: 86.5%; width: 15%; height: 12%"></a>
+      </main>
+
+      <footer class="site-footer" aria-label="Site footer">
+        <img class="footer-img" src="assets/site-footer.png" alt="" draggable="false" />
+        <a class="hotspot" href="index.html" aria-label="BookMyLife home" style="left: 5%; top: 30%; width: 13%; height: 45%"></a>
+        <a class="hotspot" href="mailto:hello@bookmylife.com" aria-label="Email hello@bookmylife.com" style="left: 41%; top: 35%; width: 15%; height: 35%"></a>
+        <a class="hotspot" href="tel:+15551234567" aria-label="Call +1 (555) 123-4567" style="left: 58%; top: 35%; width: 13%; height: 35%"></a>
+      </footer>
+    </div>
   </body>
 </html>
